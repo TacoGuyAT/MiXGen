@@ -1,0 +1,30 @@
+﻿<Window x:Class="MiXGen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xmc="clr-namespace:xmc.uc;assembly=XMCUC"
+        xmlns:local="clr-namespace:MiXGen"
+        mc:Ignorable="d"
+        Background="{DynamicResource ResourceKey=zBackground}"
+        Foreground="{DynamicResource ResourceKey=zTextColor}"
+        Title="MainWindow" Height="450" Width="800" MinWidth="690" MinHeight="420">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="280" Margin="16">
+            <TextBlock Text="MiNET XML&#10;Protocol Generator" FontSize="32" TextAlignment="Center" VerticalAlignment="Center" FontFamily="{DynamicResource zFontFamily}"/>
+            <TextBlock x:Name="ProtocolInfo" Text="MiNET: 0.0.0 (0) | gophertunnel: 0.0.0 (0)" FontSize="{DynamicResource zFontSize}" FontFamily="{DynamicResource zFontFamily}" TextAlignment="Center" Padding="4"/>
+            <StackPanel Orientation="Vertical" MaxWidth="300" Width="100" VerticalAlignment="Center">
+                <xmc:zButton Text="Load" click="Load" Height="24"/>
+                <xmc:zButton Text="Save" click="Save" Height="24"/>
+                <xmc:zButton Text="Type Registry" click="Save" Height="24"/>
+            </StackPanel>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Border Background="{DynamicResource zBackgroundDeep}"/>
+        </Grid>
+    </Grid>
+</Window>
